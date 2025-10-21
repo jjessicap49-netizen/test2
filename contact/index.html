@@ -3,65 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Website</title>
+    <title>Contact - MyWebsite</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        /* ============================================
-           CONTACT PAGE (contact.html)
-           ============================================ */
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3498db;
-        }
-
         /* Page Header */
         .page-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -83,9 +27,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            border: 3px solid #2c3e50;
-            border-radius: 10px;
-            background: white;
         }
 
         @media (max-width: 768px) {
@@ -179,71 +120,42 @@
             resize: vertical;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
+        .contact-form .btn {
             width: 100%;
-        }
-
-        .btn:hover {
-            background: #5568d3;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: transform 0.3s;
-        }
-
-        .social-link:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container">
-            <div class="logo">MyWebsite</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../product/index.html">Products</a></li>
+                <li><a href="index.html">Contact</a></li>
+                <li><a href="../faq/index.html">FAQ</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
             </ul>
+            <div class="nav-controls">
+                <button id="searchToggle" aria-label="Search">🔍</button>
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Search Box -->
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchClose">&times;</button>
+        </div>
+    </div>
 
     <section class="page-header">
         <h1>Contact Us</h1>
@@ -254,7 +166,7 @@
         <div class="contact-info">
             <h2>Get In Touch</h2>
             <p>Have a question or want to work together? Fill out the form or reach us through any of the methods below.</p>
-            
+
             <div class="info-item">
                 <div class="info-icon">📍</div>
                 <div class="info-text">
@@ -285,13 +197,6 @@
                     <h3>Business Hours</h3>
                     <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
                 </div>
-            </div>
-
-            <div class="social-links">
-                <a href="#" class="social-link">f</a>
-                <a href="#" class="social-link">t</a>
-                <a href="#" class="social-link">in</a>
-                <a href="#" class="social-link">ig</a>
             </div>
         </div>
 
@@ -330,7 +235,55 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About MyWebsite</h3>
+                    <p>We provide innovative solutions for modern businesses. Join thousands of satisfied customers worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../product/index.html">Products</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../faq/index.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@mywebsite.com</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Business St, Suite 100</li>
+                        <li>🕒 Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
 </body>
 </html>

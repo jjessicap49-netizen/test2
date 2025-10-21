@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - MyWebsite</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-section h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .faq-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 0.6rem 1.5rem;
+            background: #f0f0f0;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../product/index.html">Products</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+                <li><a href="index.html">FAQ</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="searchToggle" aria-label="Search">🔍</button>
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Box -->
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchClose">&times;</button>
+        </div>
+    </div>
+
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <p class="faq-intro">Find answers to common questions about our services and products</p>
+
+        <div class="faq-categories">
+            <button class="category-btn active">All</button>
+            <button class="category-btn">General</button>
+            <button class="category-btn">Pricing</button>
+            <button class="category-btn">Technical</button>
+            <button class="category-btn">Support</button>
+        </div>
+
+        <div class="faq-container">
+            <!-- General Questions -->
+            <div class="faq-item">
+                <div class="faq-question">What is MyWebsite?</div>
+                <div class="faq-answer">
+                    <p>MyWebsite is a comprehensive platform that provides innovative solutions for modern businesses. We offer a range of services including cloud hosting, data analytics, security solutions, and 24/7 customer support to help your business grow and succeed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I get started?</div>
+                <div class="faq-answer">
+                    <p>Getting started is easy! Simply choose a plan that fits your needs from our Products page, sign up for an account, and you'll have immediate access to our platform. Our onboarding team will guide you through the setup process, and you can start using our services within minutes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What makes your service different from competitors?</div>
+                <div class="faq-answer">
+                    <p>We stand out through our combination of cutting-edge technology, exceptional customer support, and competitive pricing. Our platform is built on the latest infrastructure, ensuring 99.9% uptime. We also provide 24/7 support and regular feature updates based on customer feedback.</p>
+                </div>
+            </div>
+
+            <!-- Pricing Questions -->
+            <div class="faq-item">
+                <div class="faq-question">What payment methods do you accept?</div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, bank transfers, and for enterprise customers, we can arrange invoice-based billing. All payments are processed securely through encrypted channels.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I upgrade or downgrade my plan?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! You can upgrade or downgrade your plan at any time from your account dashboard. Upgrades take effect immediately, and for downgrades, the changes will apply at the start of your next billing cycle. Any unused time from upgrades will be prorated.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a free trial available?</div>
+                <div class="faq-answer">
+                    <p>Yes! We offer a 14-day free trial for all our plans with no credit card required. This gives you full access to explore all features and see how our platform can benefit your business before making a commitment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is your refund policy?</div>
+                <div class="faq-answer">
+                    <p>We offer a 30-day money-back guarantee. If you're not satisfied with our service for any reason within the first 30 days, contact our support team and we'll provide a full refund, no questions asked.</p>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-item">
+                <div class="faq-question">What are the system requirements?</div>
+                <div class="faq-answer">
+                    <p>Our platform is cloud-based and accessible from any device with a modern web browser (Chrome, Firefox, Safari, or Edge). We also offer mobile apps for iOS and Android. For optimal performance, we recommend using the latest version of your preferred browser and a stable internet connection.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How secure is my data?</div>
+                <div class="faq-answer">
+                    <p>Security is our top priority. We use enterprise-grade encryption (AES-256) for data at rest and in transit, implement regular security audits, maintain SOC 2 Type II compliance, and perform daily backups. Our infrastructure is hosted in secure data centers with redundant systems to ensure your data is always protected and accessible.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you offer API access?</div>
+                <div class="faq-answer">
+                    <p>Yes! All paid plans include API access with comprehensive documentation. Our RESTful API allows you to integrate our services with your existing tools and workflows. Enterprise customers receive higher rate limits and dedicated API support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is your uptime guarantee?</div>
+                <div class="faq-answer">
+                    <p>We guarantee 99.9% uptime for all our services. Our infrastructure is built on redundant systems across multiple data centers to ensure maximum availability. In the rare event of downtime, we provide service credits as outlined in our SLA.</p>
+                </div>
+            </div>
+
+            <!-- Support Questions -->
+            <div class="faq-item">
+                <div class="faq-question">How can I contact support?</div>
+                <div class="faq-answer">
+                    <p>Our support team is available 24/7 through multiple channels: live chat on our website, email at support@mywebsite.com, phone at (555) 123-4567, or through your account dashboard. Enterprise customers also have access to dedicated account managers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What kind of support do you provide?</div>
+                <div class="faq-answer">
+                    <p>We offer comprehensive support including technical troubleshooting, onboarding assistance, training resources, and best practices guidance. Our support team consists of experienced professionals who are well-versed in all aspects of our platform.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you offer training or documentation?</div>
+                <div class="faq-answer">
+                    <p>Yes! We provide extensive documentation, video tutorials, webinars, and a knowledge base with articles covering all features. Enterprise customers can also arrange custom training sessions for their teams. All resources are available 24/7 through our help center.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I migrate my existing data to your platform?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer free data migration assistance for all new customers. Our team will work with you to ensure a smooth transition from your current system to our platform with minimal downtime and no data loss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About MyWebsite</h3>
+                    <p>We provide innovative solutions for modern businesses. Join thousands of satisfied customers worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../product/index.html">Products</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@mywebsite.com</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Business St, Suite 100</li>
+                        <li>🕒 Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

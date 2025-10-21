@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - MyWebsite</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .blog-section {
+            padding: 4rem 2rem;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .blog-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background: #f0f0f0;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../product/index.html">Products</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+                <li><a href="../faq/index.html">FAQ</a></li>
+                <li><a href="index.html">Blog</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="searchToggle" aria-label="Search">🔍</button>
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Box -->
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchClose">&times;</button>
+        </div>
+    </div>
+
+    <section class="blog-section">
+        <div class="blog-header">
+            <h1>Our Blog</h1>
+            <p>Stay updated with the latest news, insights, and tips</p>
+        </div>
+
+        <div class="blog-filters">
+            <button class="filter-btn active">All Posts</button>
+            <button class="filter-btn">Technology</button>
+            <button class="filter-btn">Business</button>
+            <button class="filter-btn">Tutorials</button>
+            <button class="filter-btn">News</button>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 October 15, 2025</span>
+                        <span>👤 Sarah Johnson</span>
+                    </div>
+                    <h3>The Future of Cloud Computing in 2025</h3>
+                    <p class="blog-excerpt">Explore the latest trends in cloud computing and how they're shaping the future of business technology. From AI integration to edge computing, discover what's next.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Technology</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">🚀</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 October 12, 2025</span>
+                        <span>👤 Michael Chen</span>
+                    </div>
+                    <h3>10 Ways to Boost Your Business Productivity</h3>
+                    <p class="blog-excerpt">Learn proven strategies to enhance your team's productivity and streamline your business operations. Practical tips you can implement today.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Business</span>
+                        <span class="tag">Productivity</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">🔒</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 October 8, 2025</span>
+                        <span>👤 Emily Rodriguez</span>
+                    </div>
+                    <h3>Essential Cybersecurity Tips for Small Businesses</h3>
+                    <p class="blog-excerpt">Protect your business from cyber threats with these essential security practices. A comprehensive guide to keeping your data safe and secure.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">💼</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 October 5, 2025</span>
+                        <span>👤 David Thompson</span>
+                    </div>
+                    <h3>How to Choose the Right Software Solution</h3>
+                    <p class="blog-excerpt">A step-by-step guide to selecting the perfect software solution for your business needs. Make informed decisions with our expert advice.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Business</span>
+                        <span class="tag">Guide</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">📊</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 October 1, 2025</span>
+                        <span>👤 Lisa Anderson</span>
+                    </div>
+                    <h3>Data Analytics: Turning Numbers into Insights</h3>
+                    <p class="blog-excerpt">Discover how data analytics can transform your business decisions. Learn to extract meaningful insights from your data and drive growth.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Technology</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">🎯</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 September 28, 2025</span>
+                        <span>👤 James Wilson</span>
+                    </div>
+                    <h3>Getting Started with API Integration</h3>
+                    <p class="blog-excerpt">A beginner's guide to API integration. Learn how to connect different services and automate your workflows with our easy-to-follow tutorial.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Tutorial</span>
+                        <span class="tag">Development</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">🌐</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 September 25, 2025</span>
+                        <span>👤 Rachel Green</span>
+                    </div>
+                    <h3>The Rise of Remote Work: Best Practices</h3>
+                    <p class="blog-excerpt">Remote work is here to stay. Learn the best practices for managing remote teams and maintaining productivity in a distributed workforce.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Business</span>
+                        <span class="tag">Remote Work</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">⚡</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 September 22, 2025</span>
+                        <span>👤 Tom Harris</span>
+                    </div>
+                    <h3>Optimizing Website Performance in 2025</h3>
+                    <p class="blog-excerpt">Speed matters! Learn the latest techniques for optimizing your website's performance and providing a better user experience for your visitors.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Technology</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">🤖</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 September 18, 2025</span>
+                        <span>👤 Anna Martinez</span>
+                    </div>
+                    <h3>AI and Machine Learning: A Business Guide</h3>
+                    <p class="blog-excerpt">Demystifying AI and machine learning for business owners. Understand how these technologies can benefit your organization and where to start.</p>
+                    <div class="blog-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Business</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About MyWebsite</h3>
+                    <p>We provide innovative solutions for modern businesses. Join thousands of satisfied customers worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../product/index.html">Products</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                        <li><a href="../faq/index.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@mywebsite.com</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Business St, Suite 100</li>
+                        <li>🕒 Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

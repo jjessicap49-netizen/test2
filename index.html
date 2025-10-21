@@ -3,65 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Website</title>
+    <title>Home - MyWebsite</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* ============================================
-           HOMEPAGE (index.html) - MAIN PAGE
-           ============================================ */
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3498db;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -81,30 +25,11 @@
             opacity: 0.9;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
         /* Features Section */
         .features {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            border: 3px solid #2c3e50;
-            border-radius: 10px;
-            background: white;
         }
 
         .features h2 {
@@ -125,7 +50,7 @@
             background: #f8f9fa;
             border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
             border: 2px solid #667eea;
         }
 
@@ -143,34 +68,44 @@
             margin-bottom: 1rem;
             color: #2c3e50;
         }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container">
-            <div class="logo">MyWebsite</div>
-            <ul>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MyWebsite</a>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="product/index.html">Products</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+                <li><a href="faq/index.html">FAQ</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
             </ul>
+            <div class="nav-controls">
+                <button id="searchToggle" aria-label="Search">🔍</button>
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+                <button id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Search Box -->
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchClose">&times;</button>
+        </div>
+    </div>
 
     <section class="hero">
         <h1>Welcome to Our Website</h1>
         <p>Discover amazing solutions for your business</p>
-        <a href="products.html" class="btn">Explore Products</a>
+        <a href="product/index.html" class="btn">Explore Products</a>
     </section>
 
     <section class="features">
@@ -199,8 +134,96 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"This service has completely transformed how we do business. The support team is incredible and always available when we need them."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JD</div>
+                    <div class="author-info">
+                        <h4>John Davis</h4>
+                        <p>CEO, Tech Innovations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"I was amazed by the speed and reliability. Our productivity has increased by 300% since we started using this platform."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div class="author-info">
+                        <h4>Sarah Martinez</h4>
+                        <p>Founder, Creative Studio</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The best investment we've made for our company. The ROI was visible within the first month. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RC</div>
+                    <div class="author-info">
+                        <h4>Robert Chen</h4>
+                        <p>Director, Global Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About MyWebsite</h3>
+                    <p>We provide innovative solutions for modern businesses. Join thousands of satisfied customers worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about/index.html">About Us</a></li>
+                        <li><a href="product/index.html">Products</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="faq/index.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@mywebsite.com</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Business St, Suite 100</li>
+                        <li>🕒 Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
